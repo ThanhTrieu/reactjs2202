@@ -27,6 +27,197 @@
     <!-- gom nhom cac the html co gan chung, gan giong nhau ve dac diem tinh chat -->
     <!-- chi can ghi nho tinh nang va dac diem tinh chat cua the do -->
     <!-- Can ghi nho cac thuoc tinh quan trong va dac biet cua cac the -->
+
+    <!-- nhom the la viec tieu de + van ban + dinh dang tieu de van -->
+    <!-- the tieu de -->
+    <!-- SEO web rat tot -->
+    <h1 class="title title2 text-center" id="title-title123"> Day la the tieu de H1</h1>
+    <h4 id="title2"> Day la the tieu de H4</h4>
+    <h6> Day la the tieu de H6</h6>
+    <!-- <h7> Day la the tieu de H7</h7> -->
+    <!-- The van ban -->
+    <p>Tiền đạo Nguyễn Văn Tùng đánh đầu mở tỷ số cho Việt Nam trước Singapore, ở bảng C U23 Đông Nam Á.</p>
+    <!-- HTML block -->
+    <!-- HTML inline -->
+    <!-- dinh dang(hien thi) cua tieu de + van -->
+    <p>Tiền đạo <strong><em>Nguyễn Văn Tùng</em></strong> đánh đầu mở tỷ số cho Việt Nam trước Singapore, ở bảng C U23 <b><i>Đông Nam Á.</i></b></p>
+    <!-- trong thuc te - neu kho dung den viec seo web ko lam dung su dung nhung the nay, cong viec nay hay giao cho css -->
+    <!-- co the liet ke them cac the loai -->
+
+    <!-- nhom the lam viec hien thi du lieu duoi dang danh sach -->
+    <!-- rat hay dc su dung de tao menu - sidebar - navbar -->
+    <ul>
+        <li> Abc </li>
+        <li> 123 </li>
+        <li> Home </li>
+    </ul>
+    <ol>
+        <li> Abc </li>
+        <li> 123 </li>
+        <li> Home </li>
+    </ol>
+
+    <!-- Nhom the lien ket / sieu lien ket -->
+    <!-- HTML inline -->
+    <a href="https://vnexpress.net/" target="_blank"> VNExpress</a>
+    <br/>
+    <a href="https://facebook.com/"> Facebook</a>
+    <br/>
+    <a href="https://dantri.com.vn/"> Dan Tri</a>
+    <br/>
+    <a href="../lession-02.html"> lession 02</a>
+    <!-- Neo Link / Anchor link -->
+    <a href="#title-title123"> go to tag H1</a>
+
+    <!-- Nhom the lam viec hien thi bang bieu du lieu -->
+    <table border="1" width="100%" cellspacing="0" cellpadding="0">
+        <thead>
+            <tr>
+                <th>MSV</th>
+                <th>Ho Ten</th>
+                <th>Que Quan</th>
+                <th>Gioi tinh</th>
+                <th>Nam sinh</th>
+                <th>Hoc bong</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>113</td>
+                <td>Nguyen Van Teo</td>
+                <td rowspan="2">Hai Duong</td>
+                <td>Nam</td>
+                <td>2000</td>
+                <td>2500000</td>
+            </tr>
+            <tr>
+                <td>114</td>
+                <td>Nguyen Van Ty</td>
+                <!-- <td>Hai Duong</td> -->
+                <td>Nu</td>
+                <td>2002</td>
+                <td>3000000</td>
+            </tr>
+            <tr>
+                <td>115</td>
+                <td>Nguyen Van Hoi</td>
+                <td>Hai Phong</td>
+                <td>Nam</td>
+                <td>2001</td>
+                <td>2000000</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="5">Tong tien hoc bong</td>
+                <td>213223435</td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- khong dung the table de phan chia giao dien -->
+    <!-- the table kho cho viec xu ly responsive -->
+
+    <!-- HTML media/multi-media -->
+    <br/><br/>
+    <img width="300" height="300" src="images/favicon-32x32.png" alt="anh icon" title="anh icon" />
+    <br/><br/>
+    <video width="320" height="240" controls loop>
+        <source src="media/movie.mp4" type="video/mp4">
+        <source src="media/movie.ogv" type="video/ogv">
+        Your browser does not support the video tag.
+    </video>
+    <br/><br>
+    <audio controls loop>
+        <!-- <source src="horse.ogg" type="audio/ogg"> -->
+        <source src="media/horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <br/><br/>
+    <!-- muon hien thi che do hinh anh do hoa can Javascript can thiep -->
+    <canvas id="picture" style="width:300px;height: 300px; border: 1px solid red;"></canvas>
+    <!-- HTML youtube -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/u6AMvDFRctg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <br/><br/><br/>
+
+    <!-- HTML Form -->
+    <form action="" method="">
+        <!-- dung de gui du lieu/ truyen tai du lieu -->
+        <label for="user">username</label>
+        <!-- cho nguoi dung nhap du lieu tren 1 dong -->
+        <input
+            value=""
+            type="text"
+            id="user"
+            name="username"
+            placeholder="Username"
+            required
+            maxlength="10"
+        />
+        <br/><br/><br/>
+        
+        <label for="number">Number</label>
+        <input type="number" id="number" />
+        <br/><br/><br/>
+
+        <label for="password">password</label>
+        <input type="password" id="password" />
+        <br/><br/><br/>
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+        <br/><br/><br/>
+        <label for="url">URL</label>
+        <input type="url" id="url" />
+        <br/><br/><br/>
+        <label for="date">Date</label>
+        <input type="month" id="date" />
+        <br/><br/><br/>
+        <br/><br/><br/>
+        <label for="color">Color</label>
+        <input type="color" id="color" />
+        <br/><br/><br/>
+        <br/><br/><br/>
+        <label for="uploadFile">File</label>
+        <input type="file" id="uploadFile" />
+        <br/><br/><br/>
+        <label for="content">Content</label>
+        <textarea rows="6" cols="80" id="content"></textarea>
+        <br/><br/><br/>
+        <label for="dateBirthday"> Date of birthday</label>
+        <select id="dateBirthday" name="dateBirthday">
+            <option value="1"> 1 </option>
+            <option value="2"> 2 </option>
+            <option value="3" selected="selected"> 3 </option>
+            <option value="4"> 4 </option>
+        </select>
+        <br/><br/><br/>
+        <label for="agree">Ban co dong y voi noi quy ?</label>
+        <!-- cho chon nhieu gia tri khac nhau -->
+        <input type="checkbox" name="agree" id="agree" checked="checked" />
+        <br/><br/><br/>
+        <label for="gender1"> Nu</label>
+        <input type="radio" id="gender1" name="gender" checked="checked" />
+        <label for="gender2"> Nam</label>
+        <input type="radio" id="gender2" name="gender" />
+
+        <br/><br/><br/>
+        <!-- chi la button de nguoi dung thao tac -->
+        <button type="button" name="btn"> Button</button>
+        <br/><br/><br/>
+        <!-- nut lenh de truyen tai du lieu -->
+        <button type="submit" name="btnSmb"> Submit</button>
+    </form>
+
+
+    <!-- HTML layout -->
+
+
+    <script type="text/javascript">
+        const canvas = document.getElementById('picture');
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'yellow';
+        ctx.fillRect(10, 10, 150, 100);
+    </script>
     
 </body>
 </html>
