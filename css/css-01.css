@@ -1,0 +1,104 @@
+/* comment CSS */
+/* nhung css khac vao */
+@import "style.css";
+
+/* ID selector */
+/*
+#title {
+    lay gia tri cua thuoc tinh ID lam selector 
+    color: yellow;
+}
+*/
+
+/* class selector */
+.title {
+    /* tim tat ca cac phan tu co thuoc tinh class voi gia tri la title */
+    /* lay gia tri cua thuoc tinh class lam selector */
+    color: blue;
+}
+
+/* HTML selector */
+/*
+h1 {
+
+    color: red;
+}
+*/
+
+h1.title {
+    /*  */
+    color: green;
+}
+
+/* Attribute selector */
+/* lay thuoc tinh bat ky cua the HTML lam selector*/
+input[type='text'] {
+    border: 2px solid red;
+}
+input[type] {
+    border: 2px solid blue;
+}
+a[href$='.net'] {
+    /* tim tat ca cac the a co thuoc href co gia tri ket thuc la .net */
+    color: green;
+}
+a[href^='https'] {
+    /* tim tat ca cac the a co thuoc href voi gia tri bat dau la https */
+    color: red;
+}
+
+p[class~='text2']{
+    color:blue;
+}
+p[class*='tex'] {
+    color: yellow;
+}
+h2[class|='title'] {
+    /* tim tat ca cac the h2 co thuoc tinh class bat dau bang gia tri title, dung dang sau gia tri title la 1 ky tu -, dung dang sau ky tu - khong can quan tam gia tri nua */
+    color: red;
+}
+
+/* Selector phan cap */
+/* thanh phan cuoi cung cua selector se bi tac dong */
+div.container header.header ~ main.main {
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+
+div.content > div.box + div.box-2 div.box-3 > div.box-4 ~ div.box-5 > h5.title {
+    color: pink;
+}
+
+/* Pesudo class selector */
+div.box-content :first-child {
+    color: red;
+}
+/* nhung loai thanh phan dau tien khac nhau */
+div.box-content :first-of-type {
+    color: blue;
+}
+
+/* thanh phan cuoi cung */
+div.box-content :last-child {
+    color: yellow;
+}
+div.box-content :last-of-type {
+    color: pink;
+}
+
+div.box-content :nth-child(4) {
+    color: violet;
+}
+
+div.box-content :nth-of-type(4) {
+    color: green;
+}
+
+div.box-content :nth-last-child(3) {
+    color: orange;
+}
+div.box-content :nth-last-of-type(3) {
+    color: brown;
+    font-style: italic;
+}
