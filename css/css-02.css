@@ -1,0 +1,83 @@
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    /* 1rem = 10px */
+    /* 16px = 1rem = 100% */
+}
+/* khai bao bien CSS */
+:root {
+    --colorText: blue;
+    --bgColorBox: yellow;
+}
+
+div.parent {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    width: 80rem;
+    height: 10rem;
+    background-color: var(--bgColorBox);
+}
+
+/* pesudo class selector */
+div.parent :only-child {
+    /* su dung bien css */
+    color: var(--colorText);
+    font-size: 10em;
+    /* override - over rule */
+    font-family: 'tahoma', arial, helvetica;
+}
+input[type="text"]:focus {
+    width: 50rem;
+    height: 5rem;
+    border: 0.2rem solid red;
+    outline: none;
+}
+input[type="checkbox"]:checked {
+    width: 20rem;
+    height: 20rem;
+}
+a.link:active {
+    color: red;
+}
+a.link:visited {
+    /* nhung link da tung vao */
+    /* luu o trong history cua trinh duyet */
+    color: yellow;
+}
+a.link:link {
+    /* nhung link chua tung vao */
+    /* phu thuoc co luu trong history cua trinh duyet hay ko */
+    color: pink;
+}
+a.link:hover {
+    color: violet;
+}
+p.text::first-letter {
+    font-size: 100px;
+    color: red;
+}
+p.text::first-line {
+    /* hien thi dong dau tien tren khung viewport cua trinh duyet */
+    color: blue;
+}
+p.text::before {
+    content: 'Hi you';
+}
+p.text::after {
+    content: url('../images/favicon-32x32.png');
+}
+p.text::selection {
+    color: yellow;
+}
+
+h3.text-title {
+    text-shadow: black 5px 10px 5px;
+}
+
+div.box {
+    width: 30rem;
+    height: 30rem;
+    border: thin solid #ccc;
+    box-shadow: black 5px 10px 5px;
+}
