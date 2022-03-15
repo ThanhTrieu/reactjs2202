@@ -1,0 +1,50 @@
+/* reset css */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    /* 1rem = 10px */
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* bien css */
+:root {
+    --widthNavbar: 20rem;
+    --bgColorNavbar: rgb(169, 241, 197);
+}
+/* common css */
+a{ text-decoration: none; color: black;}
+ul li { list-style-type: none; }
+
+.nav {
+    width: var(--widthNavbar);
+    background-color: var(--bgColorNavbar);
+    margin: 5px 0px 0px 10px;
+}
+.nav__item {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: thin solid #ccc;
+}
+.nav__item:last-child {
+    border-bottom: none;
+}
+.nav__link {
+    color: #00294d;
+    margin-left: 0.5rem;
+    font-size: 1.4rem;
+}
+.nav__item:hover {
+    background-color: #000e1a;
+    cursor: pointer;
+}
+.nav__item:hover .nav__link {
+    color: #e6ffffff;
+}
+/* css dropdown */
+.nav__dropdown {
+    display: none;
+}

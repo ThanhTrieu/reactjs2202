@@ -1,0 +1,98 @@
+/* reset css */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+}
+body {
+    padding-top: 80px;
+}
+
+div.container {
+    display: flex;
+    flex-direction: row;
+}
+
+div.box {
+    width: 200px;
+    height: 200px;
+    /* display: inline-block;
+    margin-left: -4px; */
+}
+div.box__1 {
+    background-color: red;
+    /* border: thin solid red; */
+}
+div.box__2 {
+    background-color: blue;
+    /* border: thin solid blue; */
+    /* margin-top: 10px; */
+    /* padding-top: 10px; */
+    /* padding-left: 10px; */
+    /* padding: 10px; */
+}
+p.box__title {
+    /* margin-top: 10px; */
+    /* padding-left: 10px; */
+    background-color: yellow;
+}
+div.content__1{
+    background-color: pink;
+}
+div.content__2{
+    background-color: violet;
+}
+
+.content {
+    width: 800px;
+    height: 200px;
+    /* display: flex; */
+}
+.content .child {
+    width: 200px;
+    height: 200px;
+    float: left;
+    /* display: inline-block; */
+}
+.content .child__1 {
+    background-color: green;
+}
+.content .child__2 {
+    background-color: blue;
+}
+.content .child__3 {
+    background-color: yellow;
+}
+.content__box {
+    width: 100px;
+    height: 200px;
+    background-color: pink;
+}
+.clear {
+    clear: both;
+}
+
+.picture {
+    width:300px;
+    height:300px;
+    background-color: rgb(170, 152, 152);
+    position: relative;
+}
+.picture__avatar {
+    /* khong the dung cac thuoc tinh doi xung nhau cung 1 luc */
+    /* chi co the dung cac thuoc tinh bat doi xung */
+    /* position: relative;
+    top: 150px; */
+    /* left: 150px; */
+    position:absolute;
+    top: 0px;
+    /* bottom: 150px; */
+}
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background-color: blue;
+    position:fixed;
+    top: 0px;
+    /* z-index: -1; */
+}
