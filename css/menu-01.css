@@ -28,6 +28,7 @@ ul li { list-style-type: none; }
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-bottom: thin solid #ccc;
+    position: relative;
 }
 .nav__item:last-child {
     border-bottom: none;
@@ -41,10 +42,19 @@ ul li { list-style-type: none; }
     background-color: #000e1a;
     cursor: pointer;
 }
-.nav__item:hover .nav__link {
+.nav__item:hover > .nav__link {
     color: #e6ffffff;
 }
 /* css dropdown */
 .nav__dropdown {
     display: none;
+    width: var(--widthNavbar);
+    background-color: var(--bgColorNavbar);
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+.nav__item:hover > .nav__dropdown {
+    display: block;
 }
