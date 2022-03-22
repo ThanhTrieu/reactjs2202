@@ -27,4 +27,168 @@ input,textarea,button {
 :root{
     --primaryColor:#64c29e;
     --headingColor: #353738;
+    --textColor: #848789;
+    --bgLight: #f7f7f7;
+    --bgWhite: #ffffff;
+    --bgDark: #282f35;
+    --inputBorder: #d3d7d9;
+    --inputText: #c8c8c8;
 }
+/* structure */
+.wrapper {
+    max-width: 160rem;
+    margin: 0 auto;
+}
+/* header */
+.header {
+    min-height: 80rem;
+    background-image: url("../images/background-header.jpg");
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+}
+.nav {
+    margin-top:3.5rem;
+}
+.nav__list {
+    display: flex;
+    align-items: center;
+}
+.nav__item {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    position: relative;
+}
+/* css tao . trong menu */
+.nav__item:first-child::after, .nav__item:nth-child(4)::after {
+    content: ".";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 2rem;
+}
+.nav__link {
+    position: relative;
+    display: block;
+    color: var(--headingColor);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+}
+/* end header */
+/* feature */
+.feature__header {
+    background-color: var(--bgLight);
+    padding: 11.7rem 1.5rem 14rem;
+    text-align: center;
+}
+.feature__img--top {
+    margin: 0 auto 3.5rem; 
+}
+.feature__heading {
+    color: var(--headingColor);
+    font-size:1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 3.5rem;
+    letter-spacing: 0.5rem;
+}
+.feature__header--desc {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: var(--textColor);
+    max-width: 108rem;
+    margin: 0 auto;
+}
+.feature__item {
+    display: flex;
+    flex-flow: row wrap;
+    height: 60rem;
+    overflow: hidden;
+}
+.feature__item--img {
+    width: 67%;
+    position: relative;
+}
+.feature__item--content {
+    width: 33%;
+}
+.feature__item--img .img__bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.feature__item--img .img__brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+.feature__item--content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.feature__item--content-top {
+    background-color: var(--bgWhite);
+    padding: 0 7rem;
+    height: 67%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+.feature__item--text {
+    font-size:1.6rem;
+    line-height: 1.6;
+    color: var(--textColor);
+    text-align: justify;
+    padding-bottom: 4rem;
+    position: relative;
+}
+.feature__item--content-bottom {
+    height: 33%;
+}
+.feature__item:nth-child(2) .feature__item--img {
+    order: 2;
+}
+.feature__item:last-child > .feature__item--img {
+    width: 33%;
+}
+.feature__item:last-child > .feature__item--content {
+    width: 34%;
+}
+/* tao css gach ngang ben duoi */
+.feature__item--text::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5rem;
+    height: 2px;
+    background-color:#d7d7d7;
+}
+/* css arrow */
+.feature__item--content-top::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%) rotate(-45deg);
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--bgWhite);
+    z-index: 10;
+}
+
