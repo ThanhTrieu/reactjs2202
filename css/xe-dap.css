@@ -191,4 +191,201 @@ input,textarea,button {
     background-color: var(--bgWhite);
     z-index: 10;
 }
+/* tweeter */
+.tweet {
+    padding: 12.5rem 1.5rem 7rem;
+    background-color: var(--bgLight);
+    text-align: center;
+}
+.tweet__icon {
+    font-size: 4rem;
+    color: #56c7ee;
+    margin-bottom: 3.5rem;
+}
+.tweet__heading {
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+}
+.tweet__location, .tweet__author {
+    color: var(--headingColor);
+    font-weight: bold;
+}
+.tweet__time {
+    color: var(--textColor);
+    font-weight: 300;
+    margin-left: 1.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+.tweet__time::before {
+    content: "/";
+    position: absolute;
+    left:0;
+    top: 0;
+    transform: translateY(2px);
+}
+.tweet__content {
+    font-size: 2.4rem;
+    line-height: 1.4;
+    color: var(--textColor);
+    font-style: italic;
+    max-width:104.5rem;
+    margin: 0 auto 10.3rem;
+}
+.tweet__pagi {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tweet__pagi--item {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+    border: thin solid var(--textColor);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+.tweet__pagi--item.is__active {
+    background-color: var(--textColor);
+}
+/* galleries */
+.galleries {
+    display: flex;
+    justify-content: space-between;
+    height: 53.5rem;
+    overflow: hidden;
+}
+.galleries__block {
+    width: 33.33%;
+    height:100%;
+    display: flex;
+}
+.galleries__block:first-child {
+    flex-direction: column;
+}
+.galleries__block--item {
+    height: 50%;
+    width: 100%;
+}
+.galleries__block--item:first-of-type {
+    display: flex;
+}
+.galleries__item {
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+.galleries__block--item:last-of-type .galleries__item {
+    width: 100%;
+}
+.galleries__block:last-child {
+    flex-direction: column-reverse;
+}
+.galleries__item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #71ba9e;
+    z-index: 10;
+    display: none;
+}
+.galleries__item--bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.galleries__item--brand {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    text-align: center;
+    display: none;
+}
 
+.galleries__item--brand > img {
+    margin: 0 auto;
+}
+.galleries__item--text {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.galleries__item:hover::before,
+.galleries__item:hover .galleries__item--brand {
+    display: block;
+    opacity: 0.8;
+}
+/* discovery */
+.discovery {
+    background-color: var(--bgDark);
+    text-align: center;
+    padding: 7.4rem 1.5rem;
+}
+.discovery__button {
+    text-decoration: none;
+    display: inline-block;
+    min-width:30rem;
+    padding: 2rem;
+    text-transform: uppercase;
+    color: #ffffff;
+    border: thin solid #94979a;
+    box-shadow: none;
+    outline: none;
+    font-weight: bold;
+    font-size: 1.4rem;
+    letter-spacing: 0.4rem;
+}
+.discovery__button:hover {
+    background-color: #74bd9f;
+    border-color: #74bd9f;
+}
+/* mail */
+.mail {
+    padding: 11.5rem 1.5rem;
+    background-color: var(--bgWhite);
+    text-align: center;
+}
+.mail__logo {
+    margin: 0 auto 5.5rem;
+    display: block;
+}
+.mail__text {
+    font-size: 2.4rem;
+    font-style: italic;
+    color: var(--textColor);
+    display: inline-block;
+    margin-bottom: 3.5rem;
+}
+.mail__form {
+    display: flex;
+    justify-content:space-between;
+    margin: 0 auto;
+    max-width: 53.4rem;
+}
+.mail__form--input {
+    border: thin solid var(--inputBorder);
+    color: #cccccc;
+    font-style: italic;
+    font-size: 2rem;
+    padding: 2.5rem;
+    width: 75%;
+}
+.mail__form--input::placeholder {
+    color: #cccccc;
+}
+.mail__form--button {
+    width: 25%;
+    border: 0;
+    color: #ffffff;
+    background-color: var(--primaryColor);
+    text-transform: uppercase;
+    font-size: 2.4rem;
+    font-weight: 300;
+    margin-left: 0.8rem;
+}
