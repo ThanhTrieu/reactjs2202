@@ -6,3 +6,8 @@ export const getDataCorona = async () => {
     const data = await response.json();
     return data;
 }
+
+export function* getDataCoronaV2(){
+    const urlApi   = `https://api.covid19api.com/summary`;
+    yield fetch(urlApi);
+}
