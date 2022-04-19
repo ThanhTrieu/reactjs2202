@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+<body>
+    <button onclick="myClick();"> Click me </button>
+    <br/><br/>
+    <input type="text" onkeyDown="myKeyDown();" onkeyPress="myKeyPress();" onkeyUp="myKeyUp();" />
+    <br/><br/>
+    <input type="text" onchange="myChange(this);" />
+    <div
+        style="width: 200px; height: 200px; background-color: pink;"
+        onmousedown="myMouseDown();"
+        onmouseover="myMouseOver();"
+        onmousemove="myMouseMove();"
+    ></div>
+    <script type="text/javascript">
+        function myMouseDown(){
+            console.log('ban vua click chuot');
+        }
+        function myMouseOver(){
+            console.log('Ban dang di chuyen chuot tren thanh phan nao do');
+        }
+        function myMouseMove(){
+            console.log('ban di chuyen chuot nhieu lan tren thanh phan nao do');
+        }
+        function myClick(){
+            alert('click me !');
+        }
+        function myKeyDown(){
+            console.log('ban vua nhan ban phim');
+        }
+        function myKeyPress(){
+            console.log('Tay ban dang giu phim');
+        }
+        function myKeyUp(){
+            console.log('Ban vua buong tay khoi ban phim');
+        }
+        function myChange(obj){
+            // obj chinh la tham so this ben tren - chinh la doi tuong dang tuong tac
+            console.log(obj);
+            console.log(obj.value);
+        }
+    </script>
+</body>
+</html>

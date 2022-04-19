@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM JavaScript</title>
+</head>
+<body>
+    <button type="button" id="open">Open</button>
+    <button type="button" id="close">Close</button>
+    <button type="button" id="reload">Reload</button>
+    <button type="button" id="link"> Go link</button>
+    <button type="button" id="screen"> Screen</button>
+
+    <button type="button" id="forward">Forward</button>
+    <a href="bom-02.html"> BOM 02 </a>
+
+    <script type="text/javascript">
+
+        document.getElementById("forward").onclick=function(){
+            // di den trang truoc do (da tung di den it nhat 1 lan)
+            history.forward();
+        }
+
+        // BOM Window
+        let wB = window.innerWidth;
+        let hB = window.innerHeight;
+        console.log(wB, hB);
+
+        let btnOpen = document.getElementById('open');
+        let btnClose = document.getElementById('close');
+        let btnReload = document.getElementById('reload');
+        let btnLink = document.getElementById('link');
+        let btnScreen = document.getElementById('screen');
+
+        btnScreen.addEventListener('click', function(){
+            let wScreen = screen.width;
+            let hScreen = screen.height;
+            console.log(`width screen: ${wScreen} - height screen: ${hScreen}`);
+        }); 
+
+        btnLink.onclick = function() {
+            // link sang trang moi
+            window.location.href = 'https://vnexpress.net';
+        }
+
+        btnReload.addEventListener('click', function(){
+            // reload page
+            window.location.reload(true);
+        });
+
+        btnOpen.addEventListener('click', function(){
+            // mo ra 1 tab moi tren trinh duyet
+            window.open('https://vnexpress.net/','vnexpress', 'width=300px,height=300px');
+        });
+        btnClose.onclick = function(){
+            // dong tab lai
+            window.close();
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - JS</title>
+    <style type="text/css">
+        .btn-primary {
+            color: red;
+        }
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title">Dom JavaScript</h1>
+    <button type="button" id="clickme" class="btn btn-primary"> Click me</button>
+    <br/>
+    <button type="button" id="clickme2" class="btn btn-secondary"> Click me 2</button>
+    <br/>
+    <button type="button" id="clickme3" class="btn btn-primary"> Click me 3</button>
+    <br /><br/>
+    <input type="text" class="input-form" value="username" />
+    <br/><br/>
+    <img src="../images/img1.jpg" />
+    <br/>
+    <div class="box"></div>
+
+    <script type="text/javascript">
+        // code js in here
+        // 1 - DOM element - truy cap vao phan tu trong tai lieu HTML
+        let button = document.getElementById("clickme"); // tra ve chinh doi tuong HTML
+        // tim phan tu thong qua gia tri cua thuoc tinh id
+        console.log(button);
+
+        // tim phan tu thong qua gia tri cua thuoc class
+        let button2 = document.getElementsByClassName('btn'); // HTML collection
+        console.log(button2[0], button2[1]);
+
+        // tim phan tu thong qua gia ten the HTML
+        let button3 = document.getElementsByTagName('button');// HTML collection
+        console.log(button3[0], button3[1]);
+
+        // tim phan tu thong qua selector(CSS)
+        let button4 = document.querySelectorAll('.btn-primary'); // Node List
+        //console.log(button4[0]);
+        let button5 = document.querySelector('.btn-primary'); // tra ve chinh phan tu dau tien nhan cai selector css
+        console.log(button5);
+
+        // them su kien(event) bang DOM event cho phan tu HTML
+        button.onclick = function(){
+            //console.log('click me');
+            let tagH1 = document.getElementById('title');
+            let content = tagH1.innerHTML; // lay content cua thanh phan html
+            //console.log(content);
+
+            // tac dong vao thuoc tinh cua the
+            let inputUser = document.getElementsByClassName('input-form');
+            inputUser[0].setAttribute('type', 'button');
+
+            let img = document.getElementsByTagName('img');
+            img[0].src = '../images/img2.jpg';
+            img[0].width = 100;
+            img[0].height = 100;
+
+            // can thiep css
+            let box = document.querySelector('.box');
+            box.style.backgroundColor = 'yellow';
+            box.style.width = '150px';
+            box.style.height = '150px';
+        }
+        button4[1].addEventListener('click', function(){
+            //alert('click me 3');
+            let tagH1 = document.getElementById('title');
+            tagH1.innerHTML = 'Learning JS'; // thay doi content cua thanh phan html
+        });
+    </script>
+</body>
+</html>

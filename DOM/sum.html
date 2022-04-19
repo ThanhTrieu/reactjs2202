@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum number</title>
+</head>
+<body>
+    <div class="container">
+        <label>number 1</label> 
+        <input type="text" id="number-1" />
+        <p id="err-1"></p>
+        <br/>
+        <label>number 2</label> 
+        <input type="text" id="number-2" />
+        <p id="err-2"></p>
+        <br/>
+        <button type="button" id="sum">Sum</button>
+        <p id="result"></p>
+    </div>
+    <script type="text/javascript">
+    document.getElementById("sum").addEventListener('click', function(){
+        let n1 = document.getElementById("number-1");
+        let err1 = document.getElementById("err-1");
+        let n2 = document.getElementById("number-2");
+        let err2 = document.getElementById("err-2");
+        let result = document.getElementById("result");
+
+        // lay ra dc gia tri nhap trong the input
+        let val1 = n1.value.trim(); 
+        let val2 = n2.value.trim();
+        let ck1 = null;
+        let ck2 = null;
+        if(!isNaN(val1) && val1.length > 0){
+            // thuc su la number string
+            ck1 = true;
+            err1.innerHTML = '';
+            err1.removeAttribute('style');
+        } else {
+            // khong phai la so 
+            ck1 = false;
+            err1.innerHTML = 'Vui long nhap so';
+            err1.style.color = 'red';
+        }
+
+        if(!isNaN(val2) && val2.length > 0){
+            // thuc su la number string
+            ck2 = true;
+            err2.innerHTML = '';
+            err2.removeAttribute('style');
+        } else {
+            // khong phai la so 
+            ck2 = false;
+            err2.innerHTML = 'Vui long nhap so';
+            err2.style.color = 'red';
+        }
+
+        if(ck2 && ck1) {
+            val1 = Number.parseFloat(val1);
+            val2 = Number.parseFloat(val2);
+            let s = val1 + val2;
+            result.innerHTML = `Tong hai so la : ${s}`;
+        } else {
+            result.innerHTML = '';
+        }
+    });
+    </script>
+</body>
+</html>
